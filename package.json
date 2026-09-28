@@ -1,0 +1,23 @@
+{
+  "name": "ticket-nest",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A small, self-hosted Discord support ticket bot with private channels and local state.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --env-file-if-exists=.env dist/index.js",
+    "register": "node --env-file-if-exists=.env dist/deploy-commands.js",
+    "demo": "node dist/demo.js"
+  },
+  "dependencies": {
+    "discord.js": "14.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "typescript": "^5.9.3"
+  }
+}
